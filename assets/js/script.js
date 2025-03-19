@@ -2,31 +2,31 @@ const dishDetails = {
     burger: {
         title: "Classic Cheeseburger",
         description: "A juicy beef patty topped with melted cheese, fresh lettuce, tomato, and our signature sauce.",
-        image: "assets/burgerburger.jpg"
+        image: "assets/img/burgerburger.jpg"
     },
     pizza: {
         title: "Pepperoni Pizza",
         description: "A crispy crust loaded with rich tomato sauce, mozzarella cheese, and spicy pepperoni slices.",
-        image: "assets/pizzapizza.jpg"
+        image: "assets/img/pizzapizza.jpg"
     },
     pasta: {
         title: "Creamy Alfredo Pasta",
         description: "Delicious fettuccine pasta tossed in a rich, creamy Alfredo sauce with grilled chicken.",
-        image: "assets/pastapasta.jpg"
+        image: "assets/img/pastapasta.jpg"
     },
     sandwich: {
         title: "Grilled Chicken Sandwich",
         description: "A freshly grilled chicken breast with lettuce, tomato, and garlic aioli on a toasted bun.",
-        image: "assets/sandwichsandwich.jpg"
+        image: "assets/img/sandwichsandwich.jpg"
     }
 };
 
 function showDetails(cuisine) {
     if (dishDetails[cuisine]) {
-        // Hide main menu
+        
         document.getElementById("main-menu").classList.add("blur");
 
-        // Show details
+        
         const detailsDiv = document.getElementById("details");
         detailsDiv.classList.add("show");
         detailsDiv.style.display = "flex";
@@ -40,7 +40,7 @@ function showDetails(cuisine) {
         detailsDiv.style.width = "80%";
         detailsDiv.style.maxWidth = "500px";
 
-        // Change content dynamically
+        
         document.getElementById("dish-title").textContent = dishDetails[cuisine].title;
         document.getElementById("dish-description").textContent = dishDetails[cuisine].description;
         const dishImage = document.getElementById("dish-image");
@@ -50,7 +50,7 @@ function showDetails(cuisine) {
         dishImage.style.borderRadius = "10px";
         dishImage.style.margin = "10px 0";
 
-        // Change background
+        
         document.body.classList.add("details-open");
     }
 }
