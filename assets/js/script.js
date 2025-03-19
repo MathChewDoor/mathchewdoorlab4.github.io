@@ -36,14 +36,15 @@ function showDetails(cuisine) {
         detailsDiv.style.transform = "translate(-50%, -50%)";
         detailsDiv.style.width = "80%";
         detailsDiv.style.maxWidth = "500px";
-        detailsDiv.style.background = "rgba(255, 255, 255, 0.9)";
+        detailsDiv.style.background = "rgba(0, 0, 0, 0.8)"; 
+        detailsDiv.style.color = "#ffffff"; 
         detailsDiv.style.padding = "20px";
         detailsDiv.style.borderRadius = "10px";
         detailsDiv.style.boxShadow = "0 4px 10px rgba(0, 0, 0, 0.2)";
 
         document.getElementById("dish-title").textContent = dishDetails[cuisine].title;
         document.getElementById("dish-description").textContent = dishDetails[cuisine].description;
-        
+
         const dishImage = document.getElementById("dish-image");
         dishImage.src = dishDetails[cuisine].image;
         dishImage.style.width = "100%";
