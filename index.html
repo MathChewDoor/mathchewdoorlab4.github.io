@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Guide</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body style="background: url('assets/img/restaurant_bg.jpg') no-repeat center center fixed; background-size: cover;">
+    <div id="main-menu" class="center">
+        <h1>Restaurant Guide</h1>
+        <div class="cuisines">
+            <div class="cuisine" onclick="showDetails('burger')">
+                <img src="assets/img/burgerburger.jpg" alt="Burgers">
+                <h2>Burgers</h2>
+                <p class="preview">Two buns with meat patty in between.</p>
+            </div>
+            <div class="cuisine" onclick="showDetails('pizza')">
+                <img src="assets/img/pizzapizza.jpg" alt="Pizzas">
+                <h2>Pizzas</h2>
+                <p class="preview">A famous Italian dish with various toppings.</p>
+            </div>
+            <div class="cuisine" onclick="showDetails('pasta')">
+                <img src="assets/img/pastapasta.jpg" alt="Pastas">
+                <h2>Pastas</h2>
+                <p class="preview">A special Italian noodle dish.</p>
+            </div>
+            <div class="cuisine" onclick="showDetails('sandwich')">
+                <img src="assets/img/sandwichsandwich.jpg" alt="Sandwiches">
+                <h2>Sandwiches</h2>
+                <p class="preview">Slices of bread with various fillings.</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="details" class="hidden">
+        <button id="main-menu-btn" onclick="goBack()">Back</button>
+        <h2 id="dish-title"></h2>
+        <img id="dish-image" src="" alt="Dish Image">
+        <p id="dish-description"></p>
+    </div>
+
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
